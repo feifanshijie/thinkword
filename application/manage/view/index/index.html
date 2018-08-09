@@ -1,0 +1,73 @@
+{extend name="common" /}
+{block name="style"}
+<style scoped>
+    .layout{
+        border: 1px solid #d7dde4;
+        background: #f5f7f9;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .layout-logo{
+        width: 100px;
+        height: 30px;
+        background: #5b6270;
+        border-radius: 3px;
+        float: left;
+        position: relative;
+        top: 15px;
+        left: 20px;
+    }
+    .layout-nav{
+        width: 420px;
+        margin: 0 auto;
+        margin-right: 20px;
+    }
+    .layout-footer-center{
+        text-align: center;
+    }
+</style>
+{/block}
+{block name="content"}
+<i-content :style="{padding: '0 50px'}">
+    <breadcrumb :style="{margin: '20px 0'}">
+        <breadcrumb-item>主页</breadcrumb-item>
+        <breadcrumb-item>组件</breadcrumb-item>
+        <breadcrumb-item>布局</breadcrumb-item>
+    </breadcrumb>
+    <card>
+        <div style="min-height: 500px;">
+            <radio-group v-model="vertical">
+                <radio label="apple">
+                    <icon type="social-apple"></icon>
+                    <span>Apple</span>
+                </radio>
+                <radio label="android">
+                    <icon type="social-android"></icon>
+                    <span>Android</span>
+                </radio>
+                <radio label="windows">
+                    <Icon type="social-windows"></Icon>
+                    <span>Windows</span>
+                </radio>
+            </radio-group>
+        </div>
+    </card>
+</i-content>
+{/block}
+{block name="script"}
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            visible: false,
+            vertical: 'apple'
+        },
+        methods: {
+            show: function () {
+                this.visible = true;
+            }
+        }
+    })
+</script>
+{/block}

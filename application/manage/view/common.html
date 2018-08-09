@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>iview example</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/iview/2.14.0/styles/iview.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/iview/2.14.0/iview.min.js"></script>
+    {block name="style"}{/block}
+</head>
+<body>
+<div id="app">
+<layout>
+    {include file="public/header" /}
+    {block name="content"}{/block}
+    {include file="public/footer" /}
+</layout>
+</div>
+{block name="script"}{/block}
+</body>
+</html>
